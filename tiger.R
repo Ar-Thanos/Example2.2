@@ -5,4 +5,6 @@ tigerTable <- sort(table(tigerData$activity), decreasing = TRUE)
 tigerTable
 data.frame(Frequency = tigerTable)
 data.frame(Frequency = addmargins(tigerTable))
+pdf("newTigerPlot")
 barplot(tigerTable, ylab = "Frequency", cex.names = 0.5, las = 2)
+dev.off()
